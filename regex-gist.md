@@ -1,10 +1,16 @@
-# Title (replace with your title)
+# Regular Expression Phrase Brief
 
-Introductory paragraph (replace this with your text)
+Explaning a regex phrase
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The following regular expression (regex) validates hexidecimal codes.
+
+```
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+```
+
+This would be commonly used to check that color codes are have correct syntax. It works for both hex codes that start with a "#" and those that don't, as well as for either 6-digit or 3-digit hex codes.
 
 ## Table of Contents
 
@@ -37,4 +43,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Please reach out to me with any questions:
+
+- Github: [aaguimond](https://github.com/aaguimond)
+- Email: aidanguimond2024@u.northwestern.edu
