@@ -2,6 +2,7 @@
 
 Explaning a regex phrase
 
+
 ## Summary
 
 The following regular expression (regex) validates hexidecimal codes.
@@ -11,6 +12,7 @@ The following regular expression (regex) validates hexidecimal codes.
 ```
 
 This would be commonly used to check that color codes are have correct syntax. It works for both hex codes that start with a "#" and those that don't, as well as for either 6-digit or 3-digit hex codes.
+
 
 ## Table of Contents
 
@@ -23,13 +25,38 @@ This would be commonly used to check that color codes are have correct syntax. I
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
+
 ## Regex Components
+
+Regular expressions may appear to be random characters to new developers, but they are finely structured snippets that tell the code what structure they should expect for values given to them. Regex are made up of [anchors](#anchors), [quantifiers](#quantifiers), [grouping construct(s)](#grouping-constructs), [bracket expression(s)](#bracket-expressions), [character class(es)](#character-classes), [flag(s)](#flags), [character escape(s)](#character-escapes), and possibly an [or operator](#the-or-operator). The regex phrase covered in this gist contains all of the above elements excluding flags and character escapes.
+
 
 ### Anchors
 
+The anchors in regex are the symbols that denote the beginning and ending of complex phrases. The `^` character is the start anchor and the `$` is the end anchor. These anchors allow us to be specific about what hexadecimal codes we want to verify.
+
+Our start anchor, `^`, states that the string being verified must match our regex phrase from the very beginning.
+
+Our start anchor, `$`, states that the string being verified must match our regex phrase until the very end.
+
+Anchors are not required to make valid regex. In our use case, the strict requirement that we've made with our anchors enables us to correctly verify hexadecimal codes.
+
+
 ### Quantifiers
 
+Quantifiers are operators that state how many occurrences of certain elements may appear in our regex. Our [regex phrase](#summary) uses three quantifiers:
+
+* `?` - This quantifier states that the string we're verifying may include zero or one `#`. When combined with our anchors, this quantifier denotes that a valid hexadecimal code may or may not begin with a `#`.
+
+* `{6}` - This quantifier states that there may only be exactly six of the element directly preceeding it. Since that element is written between `[]`, this quantifier allows any six of the elements included within that [character class](#character-classes).
+
+* `{3}` - Similar to the above, this quantifier states that there may only be exactly three of the characters within the allowed scope.
+
+
 ### Grouping Constructs
+
+
+
 
 ### Bracket Expressions
 
